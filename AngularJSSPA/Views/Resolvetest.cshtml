@@ -1,0 +1,34 @@
+﻿@{
+    PageData["title"] = "AngularJS SPA | Resolve Test";
+}
+<h2>ResolveTest</h2>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in model">
+        <div class="row">
+            <div class="col-md-1">{{item.id}}</div>
+            <div class="col-md-4">{{item.lastname}}, {{item.firstname}}</div>
+            <div class="col-md-2">{{item.country}}</div>
+            <div class="col-md-2">{{item.email}}</div>
+            <div class="col-md-3">
+                <div class="btn-group pull-right">
+                    <button ng-click="getDetails(item.id)" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle >
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ng-click="console.log('slett')"><span class="glyphicon glyphicon-remove"></span>Slett</a></li>
+                        <li class="divider"></li>
+                        <li><a ng-click="console.log('rediger')"><span class="glyphicon glyphicon-edit"></span>Rediger</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+@*<pre>{{model | json}}</pre>*@
+
+
+
